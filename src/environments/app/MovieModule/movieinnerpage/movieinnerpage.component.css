@@ -1,0 +1,218 @@
+.text-center
+{
+    text-align: center;
+}
+.img-container
+{
+  width:100%;
+  height:auto;
+  min-height:400px;
+}
+
+.adbcd-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('../assets/adbcds/image_card.jpg') center / cover;
+}
+.adbcd-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.adbcd-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sidebar
+{
+	height:100%;
+
+	background-color: rgb(103, 158, 55);
+	position:fixed;
+	left:0;
+	top:40px;
+  bottom:0px;
+  min-width:360px;
+
+}
+.padding10
+{
+  padding:20px;
+}
+
+.img-content
+{
+ height:auto;
+ width:100%;
+}
+.img-content img
+{
+  width:100%;
+}
+
+.adbcd-card-wide.mdl-card {
+  width:99%;
+}
+.adbcd-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.adbcd-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.adbcd-card-image.mdl-card {
+  width:100%;
+  height:100%;
+  background: url('../assets/demos/image_card.jpg') center / cover;
+}
+.adbcd-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.adbcd-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+ .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background:rgb(103, 158, 55);
+  text-align: center;
+}
+
+important-people {
+    padding-bottom: 105px;
+}
+@media (max-width: 767px)
+{
+.section-padding {
+    padding: 80px 0;
+}
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-title .title-box {
+    display: inline-block;
+}
+
+.section-title h2 {
+    font-size: 32px;
+}
+.section-title h2 {
+    font-family: "Sail", cursive;
+    font-size: 48px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0.28em 15px 0.3em;
+    position: relative;
+    text-transform: capitalize;
+}
+p
+{
+  font-size:16px;
+}
+
+.adb-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.video-container
+{
+  padding:10px;
+}
+.img-contents
+{
+  padding:10px;
+}
+
+.img-contents img
+{
+height:250px;
+border:23px solid #e8e8e8;
+}
+
+.full-width
+{
+  width:100%;
+  padding:20px 10px;
+}
+h1,h2,p{
+  font-family: 'Bree Serif', serif;
+}
+
+
+.red
+{
+    color:#fd0000;
+}
+
+.portfolio-max-width {
+    max-width: 1024px;
+    margin: auto;
+    position:relative;
+    /*left:120px;*/
+}
+.close
+{
+      margin-top: -50px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+@media (min-width: 840px)
+{
+.mdl-grid {
+    padding: 8px;
+}
+}
+
+.max-top
+{
+    margin-top:80px;
+}
+
+
+.watch-view-count {
+    line-height: 24px;
+    max-height: 24px;
+    text-align: right;
+    font-size: 19px;
+    color: #666;
+    white-space: nowrap;
+    margin-bottom: 2px;
+}
+#watch7-views-info {
+    position: absolute;
+    bottom: 33px;
+    right: 0;
+    min-width: 160px;
+}
+
+
+
+.modal
+{
+  position: fixed!important;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0!important;   
+}

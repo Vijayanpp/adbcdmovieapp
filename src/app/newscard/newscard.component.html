@@ -1,0 +1,24 @@
+ <div class="adbcd-card-square mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title mdl-card--expand" [ngStyle]="{'background': 'url(' + news.urlToImage + ') center/cover'}">
+        <h2 class="mdl-card__title-text"></h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        <a href='{{news.url}}' target="_blank">
+            <h1>{{news.title}}</h1>
+        </a>
+        <p>{{news.description}}</p>
+        <span class='source'><i>Source: {{news.source}}</i></span>
+    </div>
+  <!--<div class="mdl-card__actions mdl-card--border padding">
+        <div class="material-icons mdl-badge mdl-badge--overlap ion" (click)="addFavourite(news)">favorite_border
+        </div>-->
+        <!--<span></span>
+        <div class="material-icons mdl-badge mdl-badge--overlap ion">comment </div>
+        <span></span>
+    </div>-->
+    <div class="mdl-card__menu" >
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#share" >
+               <i class="material-icons">share</i>
+               </button>
+    </div>
+</div>

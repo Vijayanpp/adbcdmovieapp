@@ -1,0 +1,68 @@
+<div class="mdl-grid search-results">
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-phone mdl-cell--12-col-tablet menu ">
+        <ul class="demo-list-icon mdl-list">
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+           <i class="material-icons">details</i>
+            <a href='#' routerLink="/general" routerLinkActive="active">General</a>
+            </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+            <i class="material-icons">wallpaper</i>
+            <a href='#' routerLink="/Entertainment" routerLinkActive="active">Entertainment</a>
+            </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+           <i class="material-icons">directions_bike</i>
+            <a href='#' routerLink="/Sports" routerLinkActive="active">Sports</a>
+            </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+            <i class="material-icons">device_hub</i>
+            <a href='#' routerLink="/Business" routerLinkActive="active">Business</a>
+            </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+           <i class="material-icons">wb_incandescent</i>
+            <a href='#' routerLink="/Science" routerLinkActive="active">Science</a>
+            </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+           <i class="material-icons">memory</i>
+            <a href='#' routerLink="/Technology" routerLinkActive="active">Technology</a>
+            </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+           <i class="material-icons">music_video</i>
+            <a href='#' routerLink="/Music" routerLinkActive="active">Music</a>
+            </span>
+            </li>
+        </ul>
+    </div>
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-phone mdl-cell--12-col-tablet ">
+        <button id="adbcd-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+            <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="adbcd-menu-lower-left">
+            <li class="mdl-menu__item" (click)="fetchNewsFromSource('national-geographic')">National Geographic</li>
+            <li class="mdl-menu__item" (click)="fetchNewsFromSource('new-scientist')">New Scientist</li>
+        </ul>
+        
+     <masonry>
+    <masonry-brick class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet " *ngFor='let news of mainnews'>
+            <adbcd-newscard [news]="news">
+            </adbcd-newscard>
+     </masonry-brick>
+    </masonry>
+
+
+    </div>
+
+
+

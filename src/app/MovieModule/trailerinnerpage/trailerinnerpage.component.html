@@ -1,0 +1,135 @@
+<div class="mdl-grid portfolio-max-width" *ngIf="movietrailer">
+
+  
+   <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp img-content" [innerHTML]="videourl">
+    
+        <!--<div  [innerHTML]="videourl"></div>-->
+   </div>
+</div>
+<div class="md1-grid portfolio-max-width" *ngIf="movietrailer" >  
+  
+  <div class="mdl-card__menu">
+    
+        <button data-toggle="modal" data-target="#share" class="mdl-button mdl-js-button mdl-button--icon mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds">
+      <i class="material-icons" >share</i>
+      </button>
+    
+     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="!movietrailer.favourite"    (click)=" addFavourite(movietrailer,movietrailer.id)" >  
+         <i class="material-icons"  >favorite_border</i>
+         </button>
+
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="movietrailer.favourite&&!movietrailer.favourite[userid]"    (click)=" addFavourite(movietrailer,movietrailer.id)" >  
+         <i class="material-icons"  >favorite_border</i>
+         </button>
+
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="movietrailer.favourite&&movietrailer.favourite[userid]"  [ngClass]="{'red':movietrailer.favourite[userid] }">
+         <i class="material-icons"  >favorite_border</i>
+         </button>
+
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="movietrailer.stars" [ngClass]="{'red': movietrailer.stars[userid] }"   (click)="like(movietrailer.id)" >
+         <i class="material-icons"  >thumb_up</i>
+         </button>
+
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="!movietrailer.stars"    (click)="like(movietrailer.id)" >
+         <i class="material-icons"  >thumb_up</i>
+         </button>
+     
+      
+     
+         
+
+         
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds" data-toggle="modal" data-target="#rate" (click)="rateThisPost()">
+         <i class="material-icons" >star</i>
+         </button>
+         <!--<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+         <i class="material-icons">add</i>
+         </button>-->
+
+         <div class='watch-view-count'>
+         
+      <div class='circle' *ngIf="movietrailer">
+         <span class='number' >{{movietrailer.rating}}</span>
+      </div>
+  
+         </div>
+    
+  </div>
+
+<div class="full-width " *ngIf="movietrailer">
+      <h1 class='max-top'>{{movietrailer.songtitle}} | {{movietrailer.title}} </h1>
+     
+   </div>
+<div class=" mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp padding10 " *ngIf="movietrailer">
+     
+      <div  [innerHTML]="movietrailer.overview" ></div>
+   </div>
+
+
+<p class="sharethisShare">Share this Article<b>:</b></p>
+<div id="buttonGroupShare" *ngIf="movietrailer">
+  <button id='fbShare' style="background:#325C94;"  (click)="shareFb()"><a>Facebook</a></button>
+ <button id='twitterShare' style="background:#00ABDC; "  (click)="shareTwitter(movienews.title)"><a>Twitter</a></button>
+  <button id='gplusShare' style="background:#EA3032"  (click)="shareGplus()"><a>Google+</a></button>
+  <button id='liShare' style="background:#0073B2;"  (click)="shareLinkedin(movienews.title)"><a>LinkedIn</a></button>
+  
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="rate" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">share</h4>
+      </div>
+      <div class="modal-body">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,1,movietrailer.id)">
+  1
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,2,movietrailer.id)">
+  2
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,3,movietrailer.id)">
+  3
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,4,movietrailer.id)">
+  4
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,5,movietrailer.id)">
+  5
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,6,movietrailer.id)">
+  6
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,7,movietrailer.id)">
+  7
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,8,movietrailer.id)">
+  8
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movietrailer.ratingCount,movietrailer.rating,9,movietrailer.id)">
+  9
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"  (click)="Rate(movietrailer.ratingCount,movietrailer.rating,10,movietrailer.id)">
+  10
+  </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

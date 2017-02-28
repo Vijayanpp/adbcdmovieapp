@@ -1,0 +1,211 @@
+<div class="mdl-grid portfolio-max-width" *ngIf="moviereview">
+
+  
+   <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp img-content">
+    <div class='review' *ngIf="moviereview">
+      <div class='circle'>
+         <span class='number' >{{moviereview.rating}}</span>
+      </div>
+   </div>
+        <img src="{{moviereview.imagepath}}"/>
+   </div>
+</div>
+<div class="md1-grid portfolio-max-width" *ngIf="moviereview" >
+  
+  
+  <div class="mdl-card__menu">
+    
+       <button data-toggle="modal" data-target="#share" class="mdl-button mdl-js-button mdl-button--icon mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds">
+      <i class="material-icons" >share</i>
+      </button>
+    
+     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="!moviereview.favourite"    (click)=" addFavourite(moviereview,moviereview.id)" >  
+         <i class="material-icons"  >favorite_border</i>
+         </button>
+
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="moviereview.favourite&&!moviereview.favourite[userid]"    (click)=" addFavourite(moviereview,moviereview.id)" >  
+         <i class="material-icons"  >favorite_border</i>
+         </button>
+
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="moviereview.favourite&&moviereview.favourite[userid]"  [ngClass]="{'red':moviereview.favourite[userid] }">
+         <i class="material-icons"  >favorite_border</i>
+         </button>
+
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="moviereview.stars" [ngClass]="{'red': moviereview.stars[userid] }"   (click)="like(moviereview.id)" >
+         <i class="material-icons"  >thumb_up</i>
+         </button>
+
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds " *ngIf="!moviereview.stars"    (click)="like(moviereview.id)" >
+         <i class="material-icons"  >thumb_up</i>
+         </button>
+     
+      
+     
+         
+
+         
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--coloreds" data-toggle="modal" data-target="#rate" (click)="rateThisPost()">
+         <i class="material-icons" >star</i>
+         </button>
+         <!--<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+         <i class="material-icons">add</i>
+         </button>-->
+
+         <div class='watch-view-count'>
+        
+         </div>
+    
+  </div>
+
+<div class="full-width " *ngIf="moviereview">
+      <h1 class='max-top'>{{moviereview.songtitle}} | {{moviereview.title}} </h1>
+   
+   </div>
+
+<div class=" mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp padding10 " *ngIf="moviereview">
+     
+      <div  [innerHTML]="moviereview.overview" ></div>
+   </div>
+
+<p class="sharethisShare">Share this Article<b>:</b></p>
+<div id="buttonGroupShare" *ngIf="movietrailer">
+  <button id='fbShare' style="background:#325C94;"  (click)="shareFb()"><a>Facebook</a></button>
+ <button id='twitterShare' style="background:#00ABDC; "  (click)="shareTwitter(movienews.title)"><a>Twitter</a></button>
+  <button id='gplusShare' style="background:#EA3032"  (click)="shareGplus()"><a>Google+</a></button>
+  <button id='liShare' style="background:#0073B2;"  (click)="shareLinkedin(movienews.title)"><a>LinkedIn</a></button>
+  
+
+
+</div>
+
+
+</div>
+
+
+<!-- <app-dialogue *ngIf='share&&moviereview'>
+  <div class="modal-header">
+        <h5 class="adbcd-modal-title" id="exampleModalLiveLabel">Share On</h5>
+        <button type="button" class="close" (click)="closeShare()" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+  <div class="modal-body">
+      <a href="https://plus.google.com/share?url={URL}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="assets/images/google.png"  alt='google'/></a>
+      <img src="assets/images/facebook-2.png" (click)="shareOnFB()" alt='facebook'/>
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet"><img src="assets/images/twitter.png" alt='google'/></a></div>
+      <div class="modal-footer">
+        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="closeShare()" data-dismiss="modal">Close</button>
+        
+      </div>
+
+</app-dialogue> -->
+
+<div id="share" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">share</h4>
+      </div>
+      <div class="modal-body">
+   <div class="social-icons-services">
+    <div class="social-figure">
+        <div class="facebook">
+            <h2 class="entypo-facebook"></h2>
+        </div>
+        <div class="social-hover">
+            <h2 class="entypo-facebook"></h2>
+        </div>
+    </div>
+    <div class="social-figure">
+        <div class="twitter">
+            <h2 class="entypo-twitter"></h2>
+        </div>
+        <div class="social-hover">
+            <h2 class="entypo-twitter"></h2>
+        </div>
+    </div>
+    <div class="social-figure">
+        <div class="gplus">
+            <h2 class="entypo-gplus"></h2>
+        </div>
+        <div class="social-hover">
+            <h2 class="entypo-gplus"></h2>
+        </div>
+    </div>
+    <div class="social-figure">
+        <div class="pinterest">
+            <h2 class="entypo-pinterest"></h2>
+        </div>
+        <div class="social-hover">
+            <h2 class="entypo-pinterest"></h2>
+        </div>
+    </div>
+    <div class="social-figure">
+        <div class="vimeo">
+            <h2 class="entypo-vimeo"></h2>
+        </div>
+        <div class="social-hover">
+            <h2 class="entypo-vimeo"></h2>
+        </div>
+    </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="rate" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">share</h4>
+      </div>
+      <div class="modal-body">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,1,moviereview.id)">
+  1
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,2,moviereview.id)">
+  2
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,3,moviereview.id)">
+  3
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,4,moviereview.id)">
+  4
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,5,moviereview.id)">
+  5
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,6,moviereview.id)">
+  6
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,7,moviereview.id)">
+  7
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,8,moviereview.id)">
+  8
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(moviereview.ratingCount,moviereview.rating,9,moviereview.id)">
+  9
+  </button>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"  (click)="Rate(moviereview.ratingCount,moviereview.rating,10,moviereview.id)">
+  10
+  </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

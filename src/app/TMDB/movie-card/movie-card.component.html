@@ -1,0 +1,41 @@
+<!-- <div class="thumbnail">
+  <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path">
+  <img src="assets/img/abstract-image.jpg" *ngIf="!movie.poster_path">
+  <div class="caption">
+    <h4 class="text-ellipsis">
+      <a routerLink="/movie/{{movie.id}}" title="{{movie.title}}">{{movie.title}}</a>
+    </h4>
+    <p><strong>Release Date: </strong>{{movie.release_date}}</p>
+    <p>
+      <a routerLink="/movie/{{movie.id}}">View details &raquo;</a>
+      <small class="label label-success pull-right" *ngIf="movie.vote_average">
+        {{movie.vote_average}}
+        <i class="glyphicon glyphicon-star"></i>
+      </small>
+    </p>
+  </div>
+</div>
+ -->
+
+ <div class="adbcd-card-square mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title mdl-card--expand" routerLink="/Movie/{{movie.id}}" [ngStyle]="{'background': 'url(https://image.tmdb.org/t/p/w300/' + movie.poster_path + ') center/cover'}">
+        <h2 class="mdl-card__title-text"></h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        <a  routerLink="/Movie/{{movie.id}}">
+            <h1>{{movie.title}}</h1>
+        </a>
+        Release Date: {{movie.release_date}}
+    </div>
+    <div class="mdl-card__actions mdl-card--border padding">
+        <div class="material-icons mdl-badge mdl-badge--overlap ion">star
+        </div>
+        <span>{{movie.vote_average}}</span>
+      
+    </div>
+    <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" data-toggle="modal" data-target="#share">
+            <i class="material-icons">share</i>
+        </button>
+    </div>
+</div>

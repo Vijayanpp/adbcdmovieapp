@@ -1,0 +1,116 @@
+
+
+ <div class='sidebar mdl-cell mdl-cell--2-col' *ngIf="movie">
+   <div class='img-content' >
+      <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>
+   </div>
+   <div class='review'>
+      <div class='circle'>
+         <span class='number'> {{movie.vote_average}}</span>
+      </div>
+   </div>
+</div>
+<div class="mdl-grid portfolio-max-width" *ngIf="movie">
+   <!-- <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp img-content">
+        <div class="mdl-card__menu">
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+         <i class="material-icons">share</i>
+         </button>
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+         <i class="material-icons">favorite_border</i>
+         </button>
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+         <i class="material-icons">comment</i>
+         </button>
+         <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+         <i class="material-icons">add</i>
+         </button>
+      </div>
+   </div> -->
+    <div lass="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card">
+   <div class="full-width ">
+      <h1>{{movie.title}}</h1>
+      <div [innerHTML]="movie.overview"></div>
+      
+   </div>
+   </div>
+   </div>
+
+   <div class="mdl-grid portfolio-max-width" *ngIf="cast">
+     <div class="full-width ">
+      <h2>Actors</h2>
+   </div>
+  <!--<div lass="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card">
+   
+   </div>-->
+   
+  <!--  <div *ngIf="cast && cast.length > 0" class="mdl-grid mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+   <div class="img-contents" *ngFor="let actor of cast">
+      <img src="https://image.tmdb.org/t/p/w500/{{actor.profile_path}}" alt=""/>
+      <div class="mdl-card__actions">
+         <span class="adb-card-image__filename">{{actor.name}}</span>
+      </div>
+   </div>
+   </div> -->
+   
+   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp actorimg" *ngFor="let actor of cast">
+      <img src="https://image.tmdb.org/t/p/w500/{{actor.profile_path}}" alt=""/>
+      <div class="mdl-card__actions">
+         <span class="adb-card-image__filename">{{actor.name}}</span>
+      </div>
+   </div>
+   </div>
+
+
+   <div class="mdl-grid portfolio-max-width" *ngIf="reviews && reviews.length > 0">
+
+  
+   
+  <!--  <div *ngIf="cast && cast.length > 0" class="mdl-grid mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+   <div class="img-contents" *ngFor="let actor of cast">
+      <img src="https://image.tmdb.org/t/p/w500/{{actor.profile_path}}" alt=""/>
+      <div class="mdl-card__actions">
+         <span class="adb-card-image__filename">{{actor.name}}</span>
+      </div>
+   </div>
+   </div> -->
+   
+   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp overflows" *ngFor="let review of reviews">
+     <blockquote>
+      <p class="text-justify">{{review.content}}</p>
+      <footer><cite title="{{review.author}}"><a href="{{review.url}}" target="_blank">{{review.author}}</a></cite></footer>
+    </blockquote>
+   </div>
+    
+
+    <!-- <div class="full-width " *ngIf="video">
+      <h1>Videos</h1>
+   <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp video-container" *ngIf="video" [innerHTML]="video.url">
+</div>
+       
+</div>
+ -->
+   </div>
+
+   <div class="mdl-grid portfolio-max-width" *ngIf="similarMovies && similarMovies.length > 0">
+   
+    <div class="full-width ">
+      <h2>Similar Movies</h2>
+   </div>
+<div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-phone mdl-cell--12-col-tablet ">
+   <masonry>
+    <masonry-brick class="mdl-cell mdl-cell--4-col mdl-cell--6-col-phone mdl-cell--6-col-tablet " *ngFor='let movie of similarMovies; let i = index;'>
+            <movie-card [movie]="movie">
+            </movie-card>
+     </masonry-brick>
+    </masonry>
+    </div>
+   </div>
+  
+  
+
+
+   
+   
+ 
+   

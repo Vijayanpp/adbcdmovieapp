@@ -1,0 +1,77 @@
+
+ <div class="mdl-grid search-results">
+   <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-phone mdl-cell--12-col-tablet menu">
+      <ul class="demo-list-icon mdl-list">
+         <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons">perm_media</i>
+            <a href='#' routerLink="/Movienews" routerLinkActive="active">Movie News</a>
+            </span>
+         </li>
+        
+         <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons">movie_filter</i>
+            <a href='#' routerLink="/Reviews" routerLinkActive="active">Reviews</a>
+            </span>
+         </li>
+         <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons">flash_on</i>
+            <a href='#' routerLink="/Trailers" routerLinkActive="active">Trailers</a>
+            </span>
+         </li>
+         <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons">library_music</i>
+            <a href='#' routerLink="/Musicvideos" routerLinkActive="active">Music Videos</a>
+            </span>
+         </li>
+         
+         <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons">donut_large</i>
+            <a href='#' routerLink="/Toprated" routerLinkActive="active">Top Rated </a>
+            </span>
+         </li>
+
+         <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons">theaters</i>
+            <a href='#' routerLink="/Popular" routerLinkActive="active">Popular</a>
+            </span>
+         </li>
+         
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            <i class="material-icons">receipt</i>
+            <a href='#' routerLink="/Gallery" routerLinkActive="active">Gallery</a>
+            </span>
+         </li>
+
+      </ul>
+   </div>
+
+     <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-phone mdl-cell--12-col-tablet ">
+        <button id="adbcd-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+            <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="adbcd-menu-lower-left">
+            <li class="mdl-menu__item" (click)="adbcd('Hollywood')">Hollywood</li>
+            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider" (click)="adbcd('Bollywood')"> Bollywood</li>
+            <li class="mdl-menu__item" (click)="adbcd('Kollywood')">Kollywood</li>
+            <li class="mdl-menu__item" (click)="adbcd('Mollywood')">Mollywood</li>
+        </ul>
+        
+     <masonry>
+    <masonry-brick class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--6-col-tablet " *ngFor='let music of musicvideos'>
+            <adbcd-moviecard [movie]="music">
+
+            </adbcd-moviecard>
+     </masonry-brick>
+    </masonry>
+
+
+    </div>
+    </div>
+

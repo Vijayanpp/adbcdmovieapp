@@ -1,0 +1,183 @@
+ 
+
+<section class="mdl-grid content" id="add-post" >
+      <div class="mdl-cell mdl-cell--12-col mdl-grid">
+
+          <!-- Card containing the inputs to add a new messages-->
+          <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet
+                  mdl-cell--6-col-desktop">
+            <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+              <h2 class="mdl-card__title-text">New Post</h2>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <form id="message-form" action="#" [formGroup]="postForm" (ngSubmit)="submitPost(postForm)">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <select class="mdl-textfield__input"  id="new-post-type" formControlName="posttype">
+                    <option value="News">News</option>
+                    <option value="Movie">Movie</option>
+                     <option value="Review">Review</option>
+                    <option value="Music">Music</option>
+                    <option value="Trailer">Trailer</option>
+                    <option value="UpcomingMovies">Upcoming Movies</option>
+                  </select>
+                  <label class="mdl-textfield__label" for="new-post-type">Post Type</label>
+                 </div>
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                 <select class="mdl-textfield__input"  id="new-post-indestry" formControlName="postindustry">
+                    <option value="Hollwyood">Hollywood</option>
+                    <option value="Bollwood">Bollywood</option>
+                     <option value="Kollywood">Kollywood</option>
+                    <option value="Mollywood">Mollywood</option>                    
+                  </select>
+                  <label class="mdl-textfield__label" for="new-post-indestry">Select Industry</label>
+                 </div>
+
+               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-title" formControlName="title">
+                  <label class="mdl-textfield__label" for="new-post-title">Movie Title</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-title" formControlName="imagepath">
+                  <label class="mdl-textfield__label" for="new-post-title">Movie Image</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-song" formControlName="songtitle">
+                  <label class="mdl-textfield__label" for="new-post-song">Song Title</label>
+                </div>
+
+                
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-release" formControlName="releasedate">
+                  <label class="mdl-textfield__label" for="new-post-release">Release Date</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-category" formControlName="category">
+                  <label class="mdl-textfield__label" for="new-post-catefory">Category</label>
+                </div>
+               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-hero" formControlName="hero">
+                  <label class="mdl-textfield__label" for="new-post-hero">Hero</label>
+                </div>
+                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-heroimg" formControlName="heroImg">
+                  <label class="mdl-textfield__label" for="new-post-heroimg">Hero image</label>
+                </div>
+
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-heroine" formControlName="heroine">
+                  <label class="mdl-textfield__label" for="new-post-heroine">Heroine</label>
+                </div>
+
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-heroineimg" formControlName="heroineImg">
+                  <label class="mdl-textfield__label" for="new-post-heroineimg">Heroine Image</label>
+                </div>
+
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-dir" formControlName="director">
+                  <label class="mdl-textfield__label" for="new-post-dir">Directors</label>
+                </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-dirImg" formControlName="directorImg">
+                  <label class="mdl-textfield__label" for="new-post-dirImg">Director's image</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-producer" formControlName="producer">
+                  <label class="mdl-textfield__label" for="new-post-producer">Producers</label>
+                </div>
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-dirImg" formControlName="producerImg">
+                  <label class="mdl-textfield__label" for="new-post-dirImg">Producer's image</label>
+                </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-musicdirector" formControlName="musicdirector">
+                  <label class="mdl-textfield__label" for="new-post-musicdirector">Music Director's</label>
+                </div>
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-producerImg" formControlName="musicdirectorImg">
+                  <label class="mdl-textfield__label" for="new-post-producerImg">Music Director's images</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-editor" formControlName="editor">
+                  <label class="mdl-textfield__label" for="new-post-editor">Editor</label>
+                </div>
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-editorImg" formControlName="editorImg">
+                  <label class="mdl-textfield__label" for="new-post-editorImg">Editor image</label>
+                </div>
+
+                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-actor" formControlName="actors">
+                  <label class="mdl-textfield__label" for="new-post-actor">Actors</label>
+                </div>
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-actorImg" formControlName="actorsImg">
+                  <label class="mdl-textfield__label" for="new-post-actorImg">Actors image</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-screenplay" formControlName="screenplay">
+                  <label class="mdl-textfield__label" for="new-post-screenplay">Screenplay</label>
+                </div>
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-screenplayImg" formControlName="screenplayImg">
+                  <label class="mdl-textfield__label" for="new-post-screenplayImg">Screenplay image</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-camera" formControlName="camera">
+                  <label class="mdl-textfield__label" for="new-post-camera">Camera</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-cameraimage" formControlName="cameraImg">
+                  <label class="mdl-textfield__label" for="new-post-cameraimage">Camera Image</label>
+                </div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-productioncompany" formControlName="productioncompany">
+                  <label class="mdl-textfield__label" for="new-post-productioncompany">Production Company</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-distribution" formControlName="distribution">
+                  <label class="mdl-textfield__label" for="new-post-distribution">Distribution</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-trailers" formControlName="trailers">
+                  <label class="mdl-textfield__label" for="new-post-trailers">Trailers</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-musicvideos" formControlName="musicvideos">
+                  <label class="mdl-textfield__label" for="new-post-musicvideos">Music Videos</label>
+                </div>
+
+                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <textarea class="mdl-textfield__input" type="text" id="new-post-overview" formControlName="overview"></textarea>
+                  <label class="mdl-textfield__label" for="new-post-overview">Overview</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="number" id="new-post-musicvideos" formControlName="rating">
+                  <label class="mdl-textfield__label" for="new-post-rating">Rating</label>
+                </div>
+
+                
+
+
+
+
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                  Add post
+                </button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </section>
+    
