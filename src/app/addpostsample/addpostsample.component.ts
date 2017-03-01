@@ -40,7 +40,8 @@ export class AddpostsampleComponent implements OnInit {
     private titleData;
     private releasedate;
     private category;
-    private songtitle
+    private songtitle;
+    private galleryimages
 
   constructor(private fb: FormBuilder) { }
 
@@ -77,7 +78,8 @@ export class AddpostsampleComponent implements OnInit {
         rating: [this.rating, [Validators.required, Validators.minLength(5)]],
         releasedate: [this.releasedate, [Validators.required, Validators.minLength(5)]],
         category: [this.category, [Validators.required, Validators.minLength(5)]],
-        songtitle: [this.songtitle, [Validators.required, Validators.minLength(5)]]
+        songtitle: [this.songtitle, [Validators.required, Validators.minLength(5)]],
+        galleryimages: [this.galleryimages, [Validators.required, Validators.minLength(5)]]
         
        
       
@@ -175,7 +177,7 @@ else
 
 }
 
- writeNewMovieData(username,uid,posttype,postindustry,title,imagepath,releasedate,category,hero,heroImg,heroine,heroineImg,director,musicdirector,editor,camera,distribution,productioncompany,overview,screenplay,rating,actors,trailers,musicvideos,songtitle)
+ writeNewMovieData(username,uid,posttype,postindustry,title,imagepath,releasedate,category,hero,heroImg,heroine,heroineImg,director,musicdirector,editor,camera,distribution,productioncompany,overview,screenplay,rating,actors,trailers,musicvideos,songtitle,galleryimages)
 {
   var postData = {
     author: username,
@@ -206,7 +208,8 @@ else
     actors:actors,
     trailers:trailers,
     musicvideos:musicvideos,
-    songtitle:songtitle
+    songtitle:songtitle,
+    galleryimages:galleryimages
   };
 
   // Get a key for a new Post.
@@ -214,6 +217,7 @@ else
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
+  console.log(posttype+"pp")
   updates['/posts/' +posttype+"/"+postindustry+"/"+newPostKey] = postData;
   updates['/posts/' +posttype+"/dev/"+newPostKey] = postData;
   return firebase.database().ref().update(updates);
@@ -242,12 +246,13 @@ submitPost(model) {
     var distribution=model.value.distribution;
     var releasedate=model.value.releasedate;
     var category=model.value.category;
-   var songtitle=model.value.songtitle
+   var songtitle=model.value.songtitle;
+   var galleryimages=model.value.galleryimages;
    console.log("posin started")
   if (title &&img) {   
   var userId = firebase.auth().currentUser.uid;
   var username="admin"
-  this.writeNewMovieData(username,userId,posttype,postindustry,title,img,releasedate,category,hero,heroImg,heroine,heroineImg,director,musicdirector,editor,camera,distribution,productioncompany,overview,screenplay,rating,actors,trailers,musicvideos,songtitle);
+  this.writeNewMovieData(username,userId,posttype,postindustry,title,img,releasedate,category,hero,heroImg,heroine,heroineImg,director,musicdirector,editor,camera,distribution,productioncompany,overview,screenplay,rating,actors,trailers,musicvideos,songtitle,galleryimages);
   }
   };
 
