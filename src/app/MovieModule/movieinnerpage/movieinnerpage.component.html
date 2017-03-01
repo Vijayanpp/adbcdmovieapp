@@ -87,61 +87,11 @@
  <button id='twitterShare' style="background:#00ABDC; "  (click)="shareTwitter(movienews.title)"><a>Twitter</a></button>
   <button id='gplusShare' style="background:#EA3032"  (click)="shareGplus()"><a>Google+</a></button>
   <button id='liShare' style="background:#0073B2;"  (click)="shareLinkedin(movienews.title)"><a>LinkedIn</a></button>
-  
-
 
 </div>
 
+<app-dialogue [movie]="movienews"></app-dialogue>
 
-
-
-<div id="rate" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Rate</h4>
-      </div>
-      <div class="modal-body">
-      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,1,movienews.id)">
-  1
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,2,movienews.id)">
-  2
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,3,movienews.id)">
-  3
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,4,movienews.id)">
-  4
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,5,movienews.id)">
-  5
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,6,movienews.id)">
-  6
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,7,movienews.id)">
-  7
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,8,movienews.id)">
-  8
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" (click)="Rate(movienews.ratingCount,movienews.rating,9,movienews.id)">
-  9
-  </button>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"  (click)="Rate(movienews.ratingCount,movienews.rating,10,movienews.id)">
-  10
-  </button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
+<app-rate [movie]="movienews"></app-rate>
 
 

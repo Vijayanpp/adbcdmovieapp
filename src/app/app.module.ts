@@ -44,6 +44,8 @@ import { MovieinnerpageComponent } from './MovieModule/movieinnerpage/movieinner
 import { MusicvideoinnerComponent } from './MovieModule/musicvideoinner/musicvideoinner.component';
 import { TrailerinnerpageComponent } from './MovieModule/trailerinnerpage/trailerinnerpage.component';
 import { ReviewinnerpageComponent } from './MovieModule/reviewinnerpage/reviewinnerpage.component';
+import { RateComponent } from './MovieModule/rate/rate.component';
+import { DialognewsComponent } from './dialognews/dialognews.component';
 
 
 
@@ -78,7 +80,9 @@ import { ReviewinnerpageComponent } from './MovieModule/reviewinnerpage/reviewin
     DialogueComponent,
     MusicvideoinnerComponent,
     TrailerinnerpageComponent,
-    ReviewinnerpageComponent
+    ReviewinnerpageComponent,
+    RateComponent,
+    DialognewsComponent
   ],
   imports: [
     BrowserModule,

@@ -77,8 +77,7 @@ export class MusicvideoinnerComponent implements OnInit {
 
    like(id)
 { 
-  console.log('hi')
-    
+     
    if(firebase.auth().currentUser!=null)
    {
     var uid = firebase.auth().currentUser.uid;
@@ -89,77 +88,6 @@ export class MusicvideoinnerComponent implements OnInit {
    {
      this.routernav.navigate(['login']);
    }
-}
-shareThisPost()
-{
-  this.share=true;
-}
-rateThisPost()
-{
-
-  this.rate=true;
-}
-Rate(count,currentRating,newRating,id)
-{
-  if(firebase.auth().currentUser!=null)
-   {  
-    
-  var uid = firebase.auth().currentUser.uid;
-  var recentPostsRef = firebase.database().ref('posts/Music/'+this.sharedService.sharedvalue.category+'/'+id);
-  this.sharedService.RatethePost(recentPostsRef,count,currentRating,newRating,uid); 
-   }
-    else
-   {
-     this.routernav.navigate(['Signin']);
-   }
-}
- ngAfterViewInit() {
-    window.componentHandler.upgradeAllRegistered();
-}
-
-
-shareFb()
-{
-    FB.ui({
-   app_id:'568461570013753',
-    method: 'share',
-    
-    display: 'popup',
-    href: 'http://www.adbcd.com',
-  }, function(response){
-    console.log(response.error_message)
-  });
-
-}
-  
-  shareGplus()
-{
- 
-  var currentURL=window.location.href;  
-  var windowOpenSettings = "height=550,width=525,left=100,top=100,menubar=0";
-  return window.open("https://plus.google.com/share?url=" + currentURL, "", windowOpenSettings), !1
-}
-
-
-  shareTwitter(currentTitle)
-{
-  var currentURL=window.location.href;
-  var windowOpenSettings = "height=550,width=525,left=100,top=100,menubar=0";
-  return window.open("https://twitter.com/share?url=" + currentURL + "&text=" + currentTitle, "", windowOpenSettings), !1
-}
-
- shareLinkedin(currentTitle)
-{
-  var currentURL=window.location.href;
-  var windowOpenSettings = "height=550,width=525,left=100,top=100,menubar=0";
-  return window.open("http://www.linkedin.com/shareArticle?mini=true&url=" + currentURL + "&title=" + currentTitle + "&source=", "", windowOpenSettings), !1
-}
-
-sharePin(currentTitle)
-{
-  var currentURL=window.location.href;
-  var windowOpenSettings = "height=550,width=525,left=100,top=100,menubar=0";
-  return window.open("https://twitter.com/share?url=" + currentURL + "&text=" + currentTitle, "", windowOpenSettings), !1
 }
 
 ngOnDestroy()

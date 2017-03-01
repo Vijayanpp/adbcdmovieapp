@@ -11,42 +11,42 @@
       <div class="modal-body">
    <div class="social-icons-services">
     <div class="social-figure">
-        <div class="facebook" (click)='shareFb()'>
+        <div class="facebook" (click)='shareFb(news.url)'>
             <h2 class="entypo-facebook"></h2>
         </div>
-        <div class="social-hover" (click)='shareFb()'>
+        <div class="social-hover" (click)='shareFb(news.url)'>
             <h2 class="entypo-facebook"></h2>
         </div>
     </div>
     <div class="social-figure">
-        <div class="twitter" (click)='shareTwitter(movie.title)'>
+        <div class="twitter" (click)='shareTwitter(news.title,news.url)'>
             <h2 class="entypo-twitter"></h2>
         </div>
-        <div class="social-hover" (click)='shareTwitter(movie.title)'>
+        <div class="social-hover" (click)='shareTwitter(news.title,news.url)'>
             <h2 class="entypo-twitter"></h2>
         </div>
     </div>
     <div class="social-figure">
-        <div class="gplus" (click)='shareGplus()'> 
+        <div class="gplus" (click)='shareGplus(news.url)'> 
             <h2 class="entypo-gplus"></h2>
         </div>
-        <div class="social-hover" (click)='shareGplus()'>
+        <div class="social-hover" (click)='shareGplus(news.url)'>
             <h2 class="entypo-gplus"></h2>
         </div>
     </div>
     <div class="social-figure">
-        <div class="pinterest" (click)='sharePin(movie.title)'>
+        <div class="pinterest" (click)='sharePin(news.title,news.url)'>
             <h2 class="entypo-pinterest"></h2>
         </div>
-        <div class="social-hover" (click)='sharePin(movie.title)'>  
+        <div class="social-hover" (click)='sharePin(news.title,news.url)'>  
             <h2 class="entypo-pinterest"></h2>
         </div>
     </div>
-    <div class="social-figure" (click)='shareLinkedin(movie.title)'>
+    <div class="social-figure" (click)='shareLinkedin(news.title,news.url)'>
         <div class="vimeo">
             <h2 class="entypo-linkedin"></h2>
         </div>
-        <div class="social-hover" (click)='shareLinkedin(movie.title)'>
+        <div class="social-hover" (click)='shareLinkedin(news.title,news.url)'>
             <h2 class="entypo-linkedin"></h2>
         </div>
     </div>
