@@ -16,7 +16,7 @@ import { ActorComponent } from './actor/actor.component';
 
 import {MoviesService} from './movies.service';
 import { MasonryModule } from 'angular2-masonry';
-
+import { DialogueComponent } from './dialogue/dialogue.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { MasonryModule } from 'angular2-masonry';
     UpcomingComponent,
     PopularSeriesComponent,
     SerieComponent,
-    ActorComponent
+    ActorComponent,
+    DialogueComponent
   ],
   imports: [
     BrowserModule,

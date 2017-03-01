@@ -1,0 +1,62 @@
+
+  <div id="share" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">share</h4>
+      </div>
+      <div class="modal-body">
+   <div class="social-icons-services">
+    <div class="social-figure">
+        <div class="facebook" (click)='shareFb()'>
+            <h2 class="entypo-facebook"></h2>
+        </div>
+        <div class="social-hover" (click)='shareFb()'>
+            <h2 class="entypo-facebook"></h2>
+        </div>
+    </div>
+    <div class="social-figure">
+        <div class="twitter" (click)='shareTwitter(movie.title)'>
+            <h2 class="entypo-twitter"></h2>
+        </div>
+        <div class="social-hover" (click)='shareTwitter(movie.title)'>
+            <h2 class="entypo-twitter"></h2>
+        </div>
+    </div>
+    <div class="social-figure">
+        <div class="gplus" (click)='shareGplus()'> 
+            <h2 class="entypo-gplus"></h2>
+        </div>
+        <div class="social-hover" (click)='shareGplus()'>
+            <h2 class="entypo-gplus"></h2>
+        </div>
+    </div>
+    <div class="social-figure">
+        <div class="pinterest" (click)='sharePin(movie.title)'>
+            <h2 class="entypo-pinterest"></h2>
+        </div>
+        <div class="social-hover" (click)='sharePin(movie.title)'>  
+            <h2 class="entypo-pinterest"></h2>
+        </div>
+    </div>
+    <div class="social-figure" (click)='shareLinkedin(movie.title)'>
+        <div class="vimeo">
+            <h2 class="entypo-linkedin"></h2>
+        </div>
+        <div class="social-hover" (click)='shareLinkedin(movie.title)'>
+            <h2 class="entypo-linkedin"></h2>
+        </div>
+    </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+

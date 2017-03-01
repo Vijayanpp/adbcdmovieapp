@@ -35,7 +35,7 @@
                
               </div>-->
       <button id="login-menu-lower-right"
-        class="mdl-button mdl-js-button mdl-button--icon">
+        class="mdl-button mdl-js-button mdl-button--icon" *ngIf='this.sharedService.sharedvalue.signin'>
   <i class="material-icons"><img [src]="imgUrl" id="user" alt="user"/></i>
     </button>
 
