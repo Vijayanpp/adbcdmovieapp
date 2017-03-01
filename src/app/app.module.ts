@@ -46,6 +46,8 @@ import { TrailerinnerpageComponent } from './MovieModule/trailerinnerpage/traile
 import { ReviewinnerpageComponent } from './MovieModule/reviewinnerpage/reviewinnerpage.component';
 import { RateComponent } from './MovieModule/rate/rate.component';
 import { DialognewsComponent } from './dialognews/dialognews.component';
+import { GalleryComponent } from './MovieModule/gallery/gallery.component';
+import { GalleryinnerpageComponent } from './MovieModule/galleryinnerpage/galleryinnerpage.component';
 
 
 
@@ -82,7 +84,9 @@ import { DialognewsComponent } from './dialognews/dialognews.component';
     TrailerinnerpageComponent,
     ReviewinnerpageComponent,
     RateComponent,
-    DialognewsComponent
+    DialognewsComponent,
+    GalleryComponent,
+    GalleryinnerpageComponent
   ],
   imports: [
     BrowserModule,

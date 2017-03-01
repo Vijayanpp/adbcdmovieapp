@@ -1010,3 +1010,326 @@ nav
 {
   position: relative;
 }
+
+
+
+
+/* ===== Footer ===== */
+
+.footer-container {
+	padding:50px 100px;
+	background-color: rgba(255, 255, 255, 0.95);
+	overflow: hidden;
+}
+
+.footer-title {
+	font-weight: 600;
+	font-size: 20px;
+	color: #4e4e4e;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+.footer-aboutus {
+	width: 306px;
+	float: left;
+	margin-right: 33px;
+}
+
+.footer-aboutus p {
+	margin-top: 25px;
+}
+
+.footer-gallery {
+	width: 306px;
+	float: left;
+	margin-right: 33px;
+}
+
+.footer-gallery ul {
+	list-style: none;
+	margin-top: -6px;
+	margin-left: -6px;
+}
+
+.footer-gallery ul li {
+	width: 72px;
+	position: relative;
+	float: left;
+	margin-top: 6px;
+	margin-left: 6px;
+	overflow: hidden;
+}
+
+.footer-contact {
+	width: 306px;
+	float: right;
+}
+
+.footer-contact p {
+	margin-top: -5px;
+}
+
+.footer-address {
+	list-style: none;
+	margin-top: 15px;
+}
+
+.footer-address li {
+	padding-left: 20px;
+	background: url(../images/footer-plus-listing.png) no-repeat left;
+	
+	/* div padding fix */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* === Footer Social Media === */
+.footer-social {
+	list-style: none;
+	margin-top: 20px;
+}
+
+.footer-social li {
+	float: left;
+	background-color: #7e7e7e;
+	border-radius: 50%;
+	margin-right: 5px;
+	
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-moz-transition: background-color 0.3s ease-in-out;
+	-ms-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.footer-social li:hover {
+	background-color: #8fbcca;
+}
+
+.footer-social li.social-color2:hover {
+	background-color: #96d7e3;
+}
+
+.footer-social li.social-color3:hover {
+	background-color: #f7ad75;
+}
+
+.footer-social li.social-color4:hover {
+	background-color: #db6666;
+}
+
+.footer-social li.social-color5:hover {
+	background-color: #8fbcca;
+}
+
+.footer-social li.social-color6:hover {
+	background-color: #3ab395;
+}
+
+.footer-social li.social-color7:hover {
+	background-color: #f5a88f;
+}
+
+.footer-social li.social-color8:hover {
+	background-color: #f68a5e;
+}
+
+.footer-social li.social-color9:hover {
+	background-color: #8fbcca;
+}
+
+/* ===== Footer Bottom ===== */
+
+.footer-bottom {
+	height: 40px;
+	padding-top: 9px;
+	background-color: rgba(30, 30, 30, 0.95);
+	border-top: rgba(78, 78, 78, 0.95) solid 2px;
+	
+	/* div padding fix */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.copyright {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #909090;
+	float: left;
+}
+
+.copyright a {
+	color: #909090;
+	text-decoration: none;
+	
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+}
+
+.copyright a:hover {
+	color: #ffffff;
+}
+
+.footer-bottom nav {
+	float: right;
+}
+
+.footer-bottom ul {
+	list-style: none;
+}
+
+.footer-bottom ul li {
+	display: inline;
+	float: left;
+	margin-left: 14px;
+}
+
+.footer-bottom ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #909090;
+	text-decoration: none;
+	
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+}
+
+.footer-bottom ul li a:hover {
+	color: #ffffff;
+}
+
+
+
+/* ===== Social Share Button ===== */
+
+#social-share {
+	margin-top: 25px;
+}
+
+#social-share .share-this {
+	font-size: 14px;
+	font-weight: 600;
+	color: #7e7e7e;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+  
+#social-share a {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	float: left;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#social-share .facebook {
+	background-color: #36bfc4;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+}
+
+#social-share .facebook:hover {
+	background-color: #31aeb3;
+}
+  
+#social-share .twitter {
+	background-color: #96d7e3;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+}
+
+#social-share .twitter:hover {
+	background-color: #89c4cf;
+}
+  
+#social-share .googleplus {
+	background-color: #ee7760;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+}
+
+#social-share .googleplus:hover {
+	background-color: #de705b;
+}
+
+/* ===== Social Share Button End ===== */
+
+
+
+/* ===== Go To Top ===== */
+
+.back-to-top {
+	width: 40px;
+	height: 40px;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+	background: url(../images/go-to-top.png) no-repeat;
+	opacity: 0.7;
+	z-index: 1000;
+    display: none;
+}
+
+.back-to-top:hover {    
+    opacity: 0.9;
+}
+
+/* ===== Go To Top End ===== */
+
+
+
+/* ===== Hover Effect ===== */
+
+.thumbnail-hover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../images/plus-link-thumbnail.png) no-repeat center center;
+	background-color: rgba(54, 191, 196, 0.85);
+	opacity: 0;
+	
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.thumbnail-hover:hover {
+	opacity: 1;
+}
+
+.team {
+	background: rgba(54, 191, 196, 0.85);
+	z-index: 10;
+}
+
+.related-work .thumbnail-hover {
+	background: rgba(54, 191, 196, 0.85);
+}
+
+.blog-lists .thumbnail-hover {
+	background: rgba(54, 191, 196, 0.85) url(../images/lupe2.png) no-repeat center;
+}

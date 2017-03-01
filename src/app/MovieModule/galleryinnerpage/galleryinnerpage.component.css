@@ -1,0 +1,285 @@
+.grid-fullwidth {
+    max-width: 100%;
+    min-width: 240px;
+    width: auto;
+    margin: auto;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+}
+/* === Filter === */
+.category-filter {
+	background-color: #3a3a3a;
+}
+
+.category-filter.boxstyle {
+	background-color: rgba(46, 46, 46, 0.85);
+}
+
+.category-filter .wrapper {
+	padding: 30px 0px;
+	
+	/* div padding fix */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.category-filter.boxstyle .wrapper {
+	padding: 30px 35px;
+	
+	/* div padding fix */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.category-filter .center {
+	text-align: center;
+}
+
+.category-filter h2 {
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 45px;
+	float: left;
+	margin-top: -8px;
+	margin-right: 35px;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.category-filter ul li {
+	display: inline;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+/* === Fullwidth Thumbnails === */
+
+.grid-fullwidth {
+	max-width:100%;
+	min-width:240px;
+	width:auto;
+	margin:auto;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: hidden;
+}
+ 
+.megafolio-container {
+   width:100%; 
+   position:relative;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+}
+
+.header-image {
+	overflow: hidden;
+}
+
+.header-image.header-feature1 {
+	background: #000 url(../images/upload/fullwidth-header-feature-image1.jpg) no-repeat;
+	background-size: cover;
+}
+
+.header-image.header-feature2 {
+	background: #000 url(../images/upload/fullwidth-header-feature-image2.jpg) no-repeat;
+	background-size: cover;
+    padding:30px 100px;
+}
+
+.header-image .wrapper {
+	margin-top: 57px;
+	padding: 59px 0px 40px 0px;
+}
+
+.header-image h1 {
+	font-size: 36px;
+	font-weight: 600;
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 45px;
+}
+
+.header-image p {
+	width: 55%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #ffffff;
+	margin-top: 13px;
+}
+
+.header-image .pagenav {
+	margin-top: 25px;
+}
+
+.header-image .pagenav ul{
+	color: #ffffff;
+}
+
+.header-image .pagenav ul li {
+	border-right: #ffffff solid 1px;
+}
+
+.header-image .pagenav ul li:last-child {
+	border-right: none;
+}
+
+.header-image .pagenav ul li a{
+	color: #ffffff;
+}
+
+.header-image .pagenav ul li a:hover{
+	color: #4e4e4e;
+}
+
+.portfolio-content {
+	display: table;
+	padding-bottom: 40px;
+	border-bottom: #ffffff solid 1px;
+	overflow: hidden;
+}
+
+.portfolio-content figure {
+	width: 539px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.portfolio-details {
+	width: 375px;
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 30px;
+	
+	/* div padding fix */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.portfolio-details h1 {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 36px;
+	color: #4e4e4e;
+	text-transform: uppercase;
+}
+
+.portfolio-tag {
+	margin-top: 25px;
+	padding-left: 25px;
+	border-left: #36bfc4 solid 5px;
+	
+	/* div padding fix */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.portfolio-tag ul {
+	list-style: none;
+}
+
+.portfolio-tag ul li {
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 14px;
+	color: #36bfc4;
+	text-transform: uppercase;
+	margin-bottom: 13px;
+}
+
+.portfolio-tag ul li span{
+	color: #7e7e7e;
+	margin-left: 3px;
+}
+
+.portfolio-tag button {
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border: none;
+	background-color: #36bfc4;
+	border-radius: 5px;
+	margin-top: 18px;
+	cursor: pointer;
+	
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out;
+	-o-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.portfolio-tag button:hover {
+	background-color: #3a3a3a;
+}
+
+.portfolio-text {
+	margin-top: 30px;
+}
+
+.gallery-multiple {
+	display: none;
+}
+
+/* === Related Work === */
+
+.related-work h2 {
+	font-size: 24px;
+	font-weight: 600;
+	color: #4e4e4e;
+	text-transform: uppercase;
+	margin-top: 40px;
+}
+
+.related-work ul {
+	list-style: none;
+	margin-top: 13px;
+	margin-left: -22px;
+}
+
+.related-work ul li {
+	width: 212px;
+	float: left;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	margin-top: 22px;
+	margin-left: 22px;
+}
+
+.related-work ul li .thumbnail-title {
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 50px 20px 0px 20px;
+	margin-top: 30%;
+	background: url(../images/lupe2.png) no-repeat top;
+	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.related-work ul li:hover .thumbnail-title {
+	margin-top: 24%;
+}
+

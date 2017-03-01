@@ -35,7 +35,8 @@ import { MovieinnerpageComponent } from './MovieModule/movieinnerpage/movieinner
 import { MusicvideoinnerComponent } from './MovieModule/musicvideoinner/musicvideoinner.component';
 import { TrailerinnerpageComponent } from './MovieModule/trailerinnerpage/trailerinnerpage.component';
 import { ReviewinnerpageComponent } from './MovieModule/reviewinnerpage/reviewinnerpage.component';
-
+import { GalleryinnerpageComponent } from './MovieModule/galleryinnerpage/galleryinnerpage.component';
+import { GalleryComponent } from './MovieModule/gallery/gallery.component';
 
 export const appRoutes: Routes = [
         {path:'',component:NewsComponent},
@@ -63,6 +64,8 @@ export const appRoutes: Routes = [
         {path:'addmoviedata',component:AddpostsampleComponent},
         {path:'Movienews/:id',component:MovieinnerpageComponent},
         {path:'Trailers/:id',component:TrailerinnerpageComponent},
-         {path:'Reviews/:id',component:ReviewinnerpageComponent}    
+        {path:'Reviews/:id',component:ReviewinnerpageComponent},
+        {path:'Gallery',component:GalleryComponent},
+        {path:'Gallery/:id',component:GalleryinnerpageComponent}
     
 ];
