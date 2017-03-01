@@ -81,7 +81,7 @@
   text-align: center;
 }
 
-important-people {
+.important-people {
     padding-bottom: 105px;
 }
 @media (max-width: 767px)
@@ -200,9 +200,15 @@ h1,h2,p{
 .circle
 {
   float:right!important;
-  margin:-78px auto!important;
+  margin:0px auto!important;
 }
 .padding10
 {
   padding:20px;
+}
+
+.mdl-card__menu
+{
+  position: absolute;
+  left:0px;
 }

@@ -219,5 +219,12 @@ h1,h2,p{
 .circle
 {
   float:right!important;
-  margin:-78px auto!important;
+ margin:0px auto!important;
+}
+
+
+.mdl-card__menu
+{
+  position: absolute;
+  left:0px!important;
 }

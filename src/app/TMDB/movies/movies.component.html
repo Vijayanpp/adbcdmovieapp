@@ -64,6 +64,9 @@
         </ul>-->
         
      <masonry>
+     <div class='loader' *ngIf="!topRatedList">
+     <div class="mdl-spinner mdl-js-spinner is-active" ></div>
+     </div>
     <masonry-brick class="mdl-cell mdl-cell--3-col mdl-cell--6-col-phone mdl-cell--6-col-tablet " *ngFor='let movie of topRatedList; let i = index;'>
             <movie-card [movie]="movie">
             </movie-card>

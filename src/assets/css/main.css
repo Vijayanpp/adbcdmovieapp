@@ -975,3 +975,20 @@ p
     left:0px!important;
   }
 }
+
+a:hover,a:focus;
+{
+  text-decoration: none;
+}
+
+.modal-backdrop
+{
+  z-index: 0;
+}
+
+.loader
+{
+  width:60px;
+  margin:15% auto;
+  height:auto;
+}

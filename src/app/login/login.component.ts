@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
 var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(user=>
  {
- 	console.log("login")
-    this.router.navigate([''], { relativeTo: this.route })
+ 
+   this.router.navigate(['']);
     this.sharedService.sharedvalue.signin=true;
     this.sharedService.sharedvalue.currentUser=user;
     this.writeUserData(user.uid, user.displayName, user.email, user.photoURL);

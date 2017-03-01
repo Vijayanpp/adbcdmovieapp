@@ -63,6 +63,9 @@
         </ul>
         
      <masonry>
+     <div class='loader' *ngIf="mainnews.length<1">
+     <div class="mdl-spinner mdl-js-spinner is-active" ></div>
+     </div>
     <masonry-brick class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet " *ngFor='let news of mainnews'>
             <adbcd-newscard [news]="news">
             </adbcd-newscard>

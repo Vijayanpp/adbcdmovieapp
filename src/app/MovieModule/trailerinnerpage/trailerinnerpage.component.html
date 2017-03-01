@@ -6,7 +6,15 @@
         <!--<div  [innerHTML]="videourl"></div>-->
    </div>
 </div>
-<div class="md1-grid portfolio-max-width" *ngIf="movietrailer" >  
+<div class="md1-grid portfolio-max-width" *ngIf="movietrailer" >
+
+  <div class='watch-view-count'>
+         
+      <div class='circle' *ngIf="movietrailer">
+         <span class='number' >{{movietrailer.rating}}</span>
+      </div>
+  
+         </div>
   
   <div class="mdl-card__menu">
     
@@ -46,13 +54,7 @@
          <i class="material-icons">add</i>
          </button>-->
 
-         <div class='watch-view-count'>
-         
-      <div class='circle' *ngIf="movietrailer">
-         <span class='number' >{{movietrailer.rating}}</span>
-      </div>
-  
-         </div>
+       
     
   </div>
 

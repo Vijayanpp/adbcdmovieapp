@@ -36,15 +36,11 @@ export class AppComponent {
   	 var self=this;
   	firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    console.log('user sined in')
-    self.imgUrl=user.photoURL;
-    console.log(this.imgUrl)
-    self.displayName=user.displayName;
-    self.email=user.email;
    
-    console.log(this.email)
+    self.imgUrl=user.photoURL;
+     self.displayName=user.displayName;
+    self.email=user.email; 
     self.sharedService.sharedvalue.signin=true;
-    console.log(self.sharedService.sharedvalue.signin)
     self.sharedService.sharedvalue.currentUser=user;
 
   } else {
