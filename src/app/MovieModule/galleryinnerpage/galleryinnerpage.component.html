@@ -1,12 +1,12 @@
 
     
         <!--Header With Feature Image-->
-        <section class="header-image header-feature2">
+        <section class="header-image header-feature2" *ngIf="gallery"  [ngStyle]="{'background': 'url(' + gallery.imagepath + ') center/cover'}">
         	<div class="wrapper">
-                <h1>Gallery Fullwidth</h1>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua.</p>
+                <h1>{{gallery.title}}</h1>
+                <p>gallery.overview</p>
                 
-                <
+                
                 
                 
         	</div>
@@ -14,11 +14,11 @@
         <!--Header With Feature Image End-->
 
         <!--Portfolio Container Start-->
-        <section class="portfolio-container">
+        <section class="portfolio-container" *ngIf="gallery">
         	
             <!--Category Filter-->
             <div class="category-filter">
-            	<div class="wrapper center">
+            	<!--<div class="wrapper center">
                     <ul>
                         <li class="filter selected" data-category="cat-all">ALL</li>
                         <li class="filter" data-category="cat-one">CATEGORY 1</li>
@@ -26,7 +26,7 @@
                         <li class="filter" data-category="cat-three">CATEGORY 3</li>
                         <li class="filter" data-category="cat-four">CATEGORY 4</li>
                     </ul>
-                </div>
+                </div>-->
             </div>
             <!--End-->
             
@@ -35,7 +35,7 @@
             	<div class="megafolio-container noborder norounded">
 			        
                     <!--Thumbnail 1 Start-->
-                    <div class="mega-entry cat-all cat-one cat-four" id="entry-1" data-src="assets/images/upload/image1.jpg" data-width="504" data-height="400">
+                    <div class="mega-entry cat-all cat-one cat-four"  id="entry-1" data-src="gal" data-width="504" data-height="400">
                     	
                         <!--Hover Effect Start-->
                         <div class="mega-hover alone">
@@ -46,7 +46,7 @@
                             </div>
                             
                             <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image1.jpg">
+                            <a class="fancybox" data-fancybox-group="group" href="gal">
                             	<div class="mega-hoverview mega-zoom"></div>
                             </a>
                             
@@ -56,335 +56,17 @@
                     </div>
                     <!--Thumbnail End-->
                     
-                    <!--Thumbnail 2 Start-->
-                    <div class="mega-entry cat-all cat-two cat-one" id="entry-2" data-src="assets/images/upload/image2.jpg" data-width="504" data-height="400">
+                   
                     
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image2.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
+                   
                     
-                    </div>
-                    <!--Thumbnail End-->
                     
-                    <!--Thumbnail 3 Start-->
-                    <div class="mega-entry cat-all cat-three cat-two" id="entry-3" data-src="assets/images/upload/image3.jpg" data-width="504" data-height="400">
                     
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image3.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
+                  
                     
-                    </div>
-                    <!--Thumbnail End-->
                     
-                    <!--Thumbnail 4 Start-->
-                    <div class="mega-entry cat-all cat-four cat-three" id="entry-4" data-src="assets/images/upload/image4.jpg" data-width="504" data-height="400">
-                    	
-                        <!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image4.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                        
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 5 Start-->
-                    <div class="mega-entry cat-all cat-one cat-four" id="entry-5" data-src="assets/images/upload/image5.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image5.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 6 Start-->
-                    <div class="mega-entry cat-all cat-two cat-three" id="entry-6" data-src="assets/images/upload/image6.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image6.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 7 Start-->
-                    <div class="mega-entry cat-all cat-three cat-two" id="entry-7" data-src="assets/images/upload/image7.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image7.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 8 Start-->
-                    <div class="mega-entry cat-all cat-four cat-one" id="entry-8" data-src="assets/images/upload/image8.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image8.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 9 Start-->
-                    <div class="mega-entry cat-all cat-one cat-four" id="entry-9" data-src="assets/images/upload/image9.jpg" data-width="504" data-height="400">
-                    	
-                        <!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image9.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                        
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 10 Start-->
-                    <div class="mega-entry cat-all cat-two cat-one" id="entry-10" data-src="assets/images/upload/image10.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image10.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 11 Start-->
-                    <div class="mega-entry cat-all cat-three cat-two" id="entry-11" data-src="assets/images/upload/image11.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image11.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 12 Start-->
-                    <div class="mega-entry cat-all cat-four cat-three" id="entry-12" data-src="assets/images/upload/image12.jpg" data-width="504" data-height="400">
-                    	
-                        <!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image12.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                        
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 13 Start-->
-                    <div class="mega-entry cat-all cat-one cat-four" id="entry-13" data-src="assets/images/upload/image13.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image13.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 14 Start-->
-                    <div class="mega-entry cat-all cat-two cat-one" id="entry-14" data-src="assets/images/upload/image14.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image14.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 15 Start-->
-                    <div class="mega-entry cat-all cat-three cat-four" id="entry-15" data-src="assets/images/upload/image15.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image15.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
-                    
-                    <!--Thumbnail 16 Start-->
-                    <div class="mega-entry cat-all cat-three cat-two" id="entry-16" data-src="assets/images/upload/image16.jpg" data-width="504" data-height="400">
-                    
-                    	<!--Hover Effect Start-->
-                        <div class="mega-hover alone">
-                        
-                        	<!--Title and Subtitle-->
-							<div class="mega-hovertitle">This is gallery title
-                            	<div class="mega-hoversubtitle">gallery subtitle</div>
-                            </div>
-                            
-                            <!-- Preview Button -->
-                            <a class="fancybox" data-fancybox-group="group" href="assets/images/upload/image16.jpg">
-                            	<div class="mega-hoverview mega-zoom"></div>
-                            </a>
-                            
-                        </div>
-                        <!--Hover Effect End-->
-                    
-                    </div>
-                    <!--Thumbnail End-->
+                   
+                   
 
                </div>
             </div>
